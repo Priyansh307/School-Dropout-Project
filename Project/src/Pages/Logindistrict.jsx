@@ -105,7 +105,7 @@ const Logindistrict = () => {
     <>
       <div className="log_nav">
         <header></header>
-        <nav>
+        <nav className="nav_school_my_work">
           <div className="logo">
             <img
               className="govtg"

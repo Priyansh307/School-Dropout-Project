@@ -50,18 +50,7 @@ li:hover {
     border-radius: 10px;
 }
 
-nav {
-    display: flex;
-    font-family: "Open Sans", Arial, Sans-Serif;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #0B304D;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    height: 55px;
-    font-size: 1.1rem;
-}
+
 
 
 
@@ -165,12 +154,7 @@ nav {
 .check-box{
     margin: 30px 10px 21px 0;
 }
-span{
-    color: #777;
-    font-size: 12px;
-    bottom: 68px;
-    position: absolute;
-}
+
 #login{
     left: 50px;
 }

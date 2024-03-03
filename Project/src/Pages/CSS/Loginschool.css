@@ -50,7 +50,7 @@ li:hover {
     border-radius: 10px;
 }
 
-nav {
+.nav_school_my_work {
     display: flex;
     font-family: "Open Sans", Arial, Sans-Serif;
     justify-content: space-around;
@@ -165,12 +165,7 @@ nav {
 .check-box{
     margin: 30px 10px 21px 0;
 }
-span{
-    color: #777;
-    font-size: 12px;
-    bottom: 68px;
-    position: absolute;
-}
+
 #login{
     left: 50px;
 }

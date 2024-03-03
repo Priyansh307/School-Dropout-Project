@@ -8,7 +8,7 @@ const Home_pages = () => {
   return (
     <>
       <div className="Dashboard_page">
-        <Link to="/loginschlogin">
+        <Link to="/loginschhome">
           <div className="School_img">
             <img src={school_img} alt="" />
             School
