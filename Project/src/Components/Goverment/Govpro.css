@@ -1,0 +1,362 @@
+
+h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.container_goverment {
+    background-color: white;
+    padding: 20px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.sub-container_goverment{
+    background-color: #0b304d0f;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 200px 200px 200px;
+    border: 0px solid #221a1a;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.info_table_goverment{
+    font-size: 18px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.info_table_goverment th,.info_table_goverment td{
+    border: 2px solid black;
+}
+
+
+.t_title_goverment,label{
+    font-weight: bold;
+}
+
+.table_goverment{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}
+.container_goverment_chart {
+    background-color: white;
+    padding: 20px;
+    height: 693px;
+    box-sizing: border-box;
+}
+
+.Dropout-rate-container_govertment{
+   height: 90%;
+   width: 80%;
+}
+.Dropout-rate-container_govertment{
+    background-color: #0b304d0f;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin:auto;
+    border: 0px solid #221a1a;
+    /* border: 0.5px solid #221a1a; */
+    padding-top: 30px;
+    height: 100%;
+    width: 1195px;
+    box-sizing: border-box;
+    position:relative;
+}
+.dr_title_goverment{
+    text-align: center;
+    font-family: Arial, Sans-serif;
+}
+
+.g_total_students_goverment{
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    top: 20%;
+    right: 8%;
+}
+
+.g_total_dropout_students_goverment{
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    top: 35%;
+    right: 8%;
+}
+.g_dropout_ratio_goverment{
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    top: 50%;
+    right: 8%;
+}
+.dr_pie_chart_goverment{
+   width: 75%;
+   height: 56%;
+   position: absolute;
+   top: 44%;
+   left: 3%;
+   transform: translateY(-50%);
+
+}
+.drop_out_age_wise_container_goverment{
+   background-color: #0b304d0f;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin:auto;
+    border: 0px solid #221a1a;
+    /* border: 0.5px solid #221a1a; */
+    padding: 20px;
+    height: 90%;
+    width: 90%;
+    box-sizing: border-box;
+    position:relative;
+}
+.total_students_goverment{
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    top: 20%;
+    right: 8%;
+}
+.dr_bar_chart_age_goverment{
+    width: 60%;
+    height: 55%;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    transform: translateY(-50%);
+    
+}
+
+.drop_out_gender_wise_container_goverment{
+    background-color: #0b304d0f;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin:auto;
+    border: 0px solid #221a1a;
+    /* border: 0.5px solid #221a1a; */
+    padding: 20px;
+    height: 90%;
+    width: 80%;
+    box-sizing: border-box;
+    position:relative;
+}
+.dr_bar_chart_gender_goverment{
+    
+    width: 65%;
+    height: 65%;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    transform: translateY(-50%);
+    
+}
+.drop_out_income_wise_container_goverment{
+    background-color: #0b304d0f;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin:auto;
+    border: 0px solid #221a1a;
+    /* border: 0.5px solid #221a1a; */
+    padding: 20px;
+    height: 90%;
+    width: 80%;
+    box-sizing: border-box;
+    position:relative;
+}
+
+.dr_bar_chart_income_goverment{
+
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    transform: translateY(-50%);
+    
+}
+.dropout_analysis_Cast_Wise_goverment{
+    background-color: #0b304d0f;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin:auto;
+    border: 0px solid #221a1a;
+    /* border: 0.5px solid #221a1a; */
+    padding: 20px;
+    height: 90%;
+    width: 80%;
+    box-sizing: border-box;
+    position:relative;
+}
+
+.dr_bar_chart_cast_goverment{
+    
+    width: 57%;
+    height: 60%;
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    transform: translateY(-50%);
+    
+}
+.top3{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.ins_table_goverment{
+    font-size: 18px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.ins_table_goverment th{
+    font-size: 18px;
+}
+
+.instruction_cointainer_goverment{
+    background-color: #0b304d0f;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin:auto;
+    border: 0px solid #221a1a;
+    /* border: 0.5px solid #221a1a; */
+    padding: 20px;
+    height: 90%;
+    width: 80%;
+    
+    box-sizing: border-box;
+    position:relative;
+}
+.instruction_inbox_goverment{
+    margin-left: 425px;
+    margin-right: 425px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    top: 32%;
+    left: 38%;
+}
+#dataForm_govermenrt {
+    max-width: 400px;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+input[type="submit"] {
+    background-color: #0d192edb;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.district_table_container_govermrnt{
+    background-color: #0b304d0f;
+    margin: 0 200px 200px 200px;
+    border: 0px solid #221a1a;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+
+
+/* last modified */
+
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+th, td {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    text-align: left;
+ }
+ th, td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: left;
+ }
+ th {
+     background-color: #f2f2f2;
+ }
+ .inst_text2{
+     font-size: small;
+ }
+ table .ins_table2{
+     font-size: small;
+ }
+
+
+
+
+/* unsort */
+
+
+

@@ -1,0 +1,176 @@
+
+.container_school {
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sub-container_school{
+    background-color: #0b304d0f;
+    margin: 0 200px 200px 200px;
+    border: 0px solid #221a1a;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.table_school_com{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.form-container_school p {
+    padding: 5px 0;
+
+}
+.form-container_school form {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.inl{
+   width: unset;
+   margin: 10px 5px 20px 0px;
+ }
+.btn_school,#class-select{
+    font-weight: 6  00;
+    transition: all 300ms ease;
+    padding: 0.5rem;
+    width: 6rem;
+    border-radius: 2rem;
+    border: rgb(52,52,52) 0.1rem solid;
+}
+
+.btn_school:hover{
+    cursor: pointer;
+}
+.form_school {
+    background-color: #F0F3F4;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 200px 200px 200px;
+    border: 0px solid #221a1a;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+td{
+    padding-right: 20px;
+    padding-bottom: 20px;
+    
+}
+.class-filter_school{
+    display: flex;
+    gap: 5px;
+    align-items: right;
+ }
+ select{
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+ label {
+     display: block;
+     margin-bottom: 5px;
+     color: #333;
+     font-size: 16px;
+ }
+ .sub-container_school_droptab{
+    background-color: #0b304d0f;
+    margin: 0px 302px 200px 80px;
+    border: 0px solid #221a1a;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 18px;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* un sorted */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.black-text {
+    color: black;
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.ins_table{
+    font-size: 18px;
+}
+.ins_table th{
+    font-size: 18px;
+}
+
+
+.active-container {
+    display: block;
+}
+label #student-caste{
+    padding: 10px;
+}
+section{
+    padding: 10px;
+}
+
+td .pfp{
+    margin-left: 40px;
+}
+.t_title,label{
+    font-weight: bold;
+ }
+#workpending{
+    height: 60%;
+    display: block;
+}
+
+
+
+

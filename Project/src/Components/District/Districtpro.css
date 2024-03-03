@@ -1,0 +1,400 @@
+.state_title_district{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.container_district {
+    background-color: white;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.container_district_chart {
+    background-color: white;
+    padding: 20px;
+    height: 693px;
+    box-sizing: border-box;
+}
+.sub-container_district{
+    background-color: #0b304d0f;
+    margin: 0 200px 200px 200px;
+    border: 0px solid #221a1a;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    height: auto;
+    box-sizing: border-box;
+}
+.t_title_distict,label{
+    font-weight: bold;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 16px;
+}
+.form_district {
+    background-color: #F0F3F4;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 200px 200px 200px;
+    border: 0px solid #221a1a;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.table_district{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.class-filter_district{
+    display: flex;
+    gap: 5px;
+    align-items: right;
+ }
+.btn,#class-select3{
+     font-weight: 6  00;
+     transition: all 300ms ease;
+     padding: 0.5rem;
+     width: 6rem;
+     border-radius: 2rem;
+     border: rgb(52,52,52) 0.1rem solid;
+ }
+
+ .district_table_container{
+     background-color: #0b304d0f;
+     margin: 0 200px 200px 155px;
+     border: 0px solid #221a1a;
+     box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+     border-radius: 20px;
+     padding: 20px;
+     box-sizing: border-box;
+     overflow: auto;
+ }
+select{
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+ 
+ .drop_out_gender_wise_container_district{
+     background-color: #0b304d0f;
+     border-radius: 10px;
+     box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+     margin:auto;
+     border: 0px solid #221a1a;
+     /* border: 0.5px solid #221a1a; */
+     padding: 20px;
+     height: 90%;
+     width: 80%;
+     box-sizing: border-box;
+     position:relative;
+ }
+ .dr_title_district{
+     text-align: center;
+     font-family: Arial, Sans-serif;
+ }
+ 
+ .total_students_district{
+     width: auto;
+     height: auto;
+     position: absolute;
+     font-size: 24px;
+     font-family: Arial, Sans-serif;
+     font-weight: bold;
+     border-radius: 10px;
+     box-sizing: border-box;
+     box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+     padding: 20px;
+     top: 20%;
+     right: 8%;
+    } 
+
+    
+    .total_dropout_students_district{
+        width: auto;
+        height: auto;
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: Arial, Sans-Serif;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        top: 35%;
+        right: 8%;
+    }
+  
+    
+    
+    .dropout_ratio_district{
+        width: auto;
+        height: auto;
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: Arial, Sans-Serif;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        top: 50%;
+        right: 8%;
+    }
+
+
+    .dropout_ratio_dic_district{
+        width: auto;
+        height: auto;
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: Arial, Sans-Serif;
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        top: 50%;
+        right: 4%;
+    }
+
+    .dr_bar_chart_gender_district{
+    
+        width: 65%;
+        height: 65%;
+        position: absolute;
+        top: 55%;
+        left: 5%;
+        transform: translateY(-50%);
+        
+    }
+    .drop_out_age_wise_container_district{
+        background-color: #0b304d0f;
+         border-radius: 10px;
+         box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+         margin:auto;
+         border: 0px solid #221a1a;
+         /* border: 0.5px solid #221a1a; */
+         padding: 20px;
+         height: 90%;
+         width: 80%;
+         box-sizing: border-box;
+         position:relative;
+     }
+     .dr_bar_chart_age_district{
+        width: 60%;
+        height: 55%;
+        position: absolute;
+        top: 55%;
+        left: 4%;
+        transform: translateY(-50%);
+     }
+    
+     .drop_out_income_wise_container_district{
+         background-color: #0b304d0f;
+         border-radius: 10px;
+         box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+         margin:auto;
+         border: 0px solid #221a1a;
+         /* border: 0.5px solid #221a1a; */
+         padding: 20px;
+         height: 90%;
+         width: 80%;
+         box-sizing: border-box;
+         position:relative;
+        }
+        
+        .dr_bar_chart_income_district{
+        
+            width: 50%;
+            height: 60%;
+            position: absolute;
+            top: 55%;
+            left: 5%;
+            transform: translateY(-50%);
+        
+        }
+        .drop_out_school_wise_container_district{
+            background-color: #0b304d0f;
+            border-radius: 10px;
+            box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+            margin:auto;
+            border: 0px solid #221a1a;
+            /* border: 0.5px solid #221a1a; */
+            padding: 20px;
+            height: 90%;
+            width: 80%;
+            box-sizing: border-box;
+            position:relative;
+        }
+        
+        td{
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+            text-align: center;
+            /* font-size: 20px; */
+        }
+        .district_tr_td_text{
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+            text-align: left;
+        }
+
+        
+        .instruction_cointainer_district{
+            background-color: #0b304d0f;
+            border-radius: 10px;
+            box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+            margin:auto;
+            border: 0px solid #221a1a;
+            /* border: 0.5px solid #221a1a; */
+            padding: 20px;
+            height: 90%;
+            width: 80%;
+            box-sizing: border-box;
+            position:relative;
+        }
+        
+        .instruction_inbox_district{
+            /* width: auto;
+            height: auto; */
+            /* position: absolute; */
+            margin-left: 425px;
+            margin-right: 425px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+            /* padding: 20px; */
+            top: 32%;
+            left: 38%;
+        }
+       
+        #dataForm__district {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .ins_table_district{
+            font-size: 18px;
+        }
+        .ins_table_district th{
+            font-size: 18px;
+        }
+        
+        table .ins_table_district{
+            font-size: small;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .inst_text_district{
+            font-size: small;
+        }
+        
+        .district_table_container_district{
+            background-color: #0b304d0f;
+            margin: 0 200px 200px 200px;
+            border: 0px solid #221a1a;
+            box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+            
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #0d192edb;
+            color: white;
+            font-size: 16px;
+            padding: 15px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        
+        
+        /* unsoretd */
+    
+
+        
+
+.btn:hover{
+    cursor: pointer;
+}
+
+#instruction{
+    height: auto;
+}
+.active-container {
+    display: block;
+}
+label #student-caste{
+    padding: 10px;
+}
+section{
+    padding: 10px;
+}
+
+
+.form-container p {
+    padding: 5px 0;
+    /* font-size: 20px; */
+}
+
+.form-container form {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+td .pfp{
+    margin-left: 40px;
+}
+.inl{
+    width: unset;
+    margin: 10px 5px 20px 0px;
+  }
+input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+}
+

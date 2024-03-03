@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav_h1{
+    font-weight: bolder;
+}
+.a_school_page_nav{
+    transition: all 300ms ease;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+a:hover {
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+}
+header{
+    height: 30px;
+}
+
+header,footer {
+    background-color: #0D192E;
+    font-family: "Open Sans", Arial, Sans-Serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.logo_school{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    gap: 20px;
+    font-family: "Open Sans", Arial, Sans-Serif;
+    font-style: bold;
+    margin-right: 100px;
+    margin-left: 100px;
+    z-index: 2;
+}
+.govtg_school_nav{
+    height: 98px;
+    width: 100px;
+    border-radius: 10px;
+}
+.ul_school_nav{
+    display: inline-flex;
+    list-style: none;
+}
+li{
+    padding: 15px;
+}
+li:hover{
+    background-color: #0a2132;
+    border-radius: 10px;
+}
+.nav_school {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0B304D;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 55px;
+    font-size: 1.1rem;
+}
+/* sub -navigation */
+
+ul.sub-nav_school a:hover{
+    background-color: #0a2132;
+
+}
+.sub-nav_school{
+    right:auto;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 35px;
+    margin-top: 50px;
+    background-color: #0B304D;
+    visibility: hidden;
+    z-index: 1;
+    overflow: visible;
+}
+
+li:hover ul.sub-nav_school{
+    opacity: 1;
+    top: 67px;
+    visibility: visible;
+}
+ul.sub-nav_school li{
+    float: none;
+    width: auto;
+   
+}
+ul.sub-nav_school li:hover{
+    background-color: #0a2132;
+}
+
