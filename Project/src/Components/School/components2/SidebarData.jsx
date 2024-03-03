@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { FaBars, FaCartPlus, FaEnvelopeOpenText } from 'react-icons/fa';
 import { AiFillHome, AiOutlineClose } from 'react-icons/ai'
