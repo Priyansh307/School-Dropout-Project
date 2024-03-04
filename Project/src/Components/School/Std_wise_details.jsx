@@ -23,10 +23,13 @@ const Std_wise_details = () => {
   // Define card data for each standard
   const cardData = {
     'Standard 12': [
-      { rollno: 1, name: 'Dhyanam Pathak', address: 'Raj-Mahal Road', standard: 'Standard 12', income: 'Rs.3,00,000', district: 'Vadodara',image: male_student },
-      { rollno: 2, name: 'Yogini Pambhar', address: 'Delhi-Palace', standard: 'Standard 12', income: 'Rs.3,00000', district: 'Rajkot',image:female_student },
-      { rollno: 4, name: 'Dhruv Patel', address: 'Don PGs', standard: 'Standard 12', income: 'Rs.60,000', district: 'Valsad' },
-        // Add more cards as needed
+      { rollno: 1, name: 'Dhyanam Pathak', address: 'Raj-Mahal Road', standard: 'Standard 12', income: 'Rs.3,00,000', district: 'Vadodara', image: male_student },
+      { rollno: 2, name: 'Yogini Pambhar', address: 'Delhi-Palace', standard: 'Standard 12', income: 'Rs.3,00000', district: 'Rajkot', image: female_student },
+      { rollno: 4, name: 'Dhruv Patel', address: 'Don PGs', standard: 'Standard 12', income: 'Rs.60,000', district: 'Valsad', image: male_student },
+      { rollno: 5, name: 'Pari Parikh', address: 'Bopal ', standard: 'Standard 12', income: 'Rs.3,00000', district: 'Ahmedabad', image: female_student },
+      { rollno: 6, name: 'Vraj Patel', address: 'Maninagar', standard: 'Standard 12', income: 'Rs.60,000', district: 'Rajkot', image: male_student },
+      { rollno: 10, name: 'Varma Tushar', address: 'Kathaiwadi Hostel', standard: 'Standard 12', income: 'Rs.60,000', district: 'Bhavnagar', image: male_student },
+      // Add more cards as needed
     ],
     'Standard 2': [
       { rollno: 1, name: 'Raju Seth', address: 'Pawdar Galli', standard: 'Standard 2', income: 'Rs.2,00,00,000', district: 'Mumbai' },
@@ -42,17 +45,17 @@ const Std_wise_details = () => {
       <div className="toggle-nav" onClick={toggleNavbar}>
         {navVisible ? <IoIosArrowBack /> : <IoIosArrowForward />}
       </div>
-      
+
       {navVisible && <Sd_sub_nav />}
       {activeStandard ? (
-        <div className='active_card'>
-          {/* active card ne load karavanu heavy js */}
-          {cardData[activeStandard].map(card => (
-            <School_Card key={card.rollno}  {...card} />
-          ))}
-          <div className='std_back_btn' >
-          <button className='back_btn' onClick={() => setActiveStandard(null)}>Back</button>
+        <div className='sd_grid_container'>
+          <div className='active_card'>
+            {/* active card ne load karavanu heavy js */}
+            {cardData[activeStandard].map(card => (
+              <School_Card key={card.rollno}  {...card} />
+            ))}
           </div>
+          <button className='back_btn' onClick={() => setActiveStandard(null)}>Back</button>
         </div>
       ) : (
         <div className='standard-list'>
