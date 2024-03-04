@@ -39,7 +39,7 @@ const Navbarschmo = () => {
                 {item.icon}
                 <span className='span_nav_sch_pro'>{item.title}</span>
               </Link>
-
+                <div></div>
             </li>
           )
         })
