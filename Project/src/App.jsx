@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home_pages from './Pages/Home_pages';
@@ -10,7 +9,6 @@ import Logingov from './Pages/Logingov';
 import Loginschool from './Pages/Loginschool';
 import Student_full_details from './Components/School/Student_full_details';
 import Std_wise_details from './Components/School/Std_wise_details';
-
 
 
 function App() {
