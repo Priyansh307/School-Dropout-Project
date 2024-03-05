@@ -11,10 +11,9 @@ const Student_full_details = () => {
     <>
       <Navbarschmo />
       <Routes> 
-      
-          <Route path='/student-details/home' element={<Home />} /> 
-          <Route path='/student-details/products' element={<Product />} />
-          <Route path='/student-details/report' element={<Report />} />
+          <Route path='/home' element={<Home />} /> 
+          <Route path='/products' element={<Product />} />
+          <Route path='/report' element={<Report />} />
       </Routes>
     </>
   );

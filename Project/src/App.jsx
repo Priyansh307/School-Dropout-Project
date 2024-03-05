@@ -24,7 +24,7 @@ function App() {
         <Route path="/logingov" element={<Govhome/>} />
         <Route path="/logindislogin" element={<Logindistrict/>} />
         <Route path="/logingovlogin" element={<Logingov/>} />
-        <Route path="/student-details" element={<Student_full_details/>} />
+        <Route path="/student-details/*" element={<Student_full_details/>} />
         <Route path="/standard-wise-details" element={<Std_wise_details/>} />
       </Routes>
     </Router>

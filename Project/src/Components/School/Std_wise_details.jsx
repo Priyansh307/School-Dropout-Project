@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import School_Card from './School_Card';
 import './Std_wise_details.css';
 import Sd_sub_nav from '../Navbar/Sd_sub_nav';
-import male_student from '../Assets/male_student.jpg';
-import female_student from '../Assets/female_student.jpg';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import cardData from './StudentCardData';
 
 const Std_wise_details = () => {
   const [activeStandard, setActiveStandard] = useState(null);
@@ -19,27 +18,7 @@ const Std_wise_details = () => {
   const toggleNavbar = () => {
     setNavVisible(!navVisible);
   };
-
-  // Define card data for each standard
-  const cardData = {
-    'Standard 12': [
-      { rollno: 1, name: 'Dhyanam Pathak', address: 'Raj-Mahal Road', standard: 'Standard 12', income: 'Rs.3,00,000', district: 'Vadodara', image: male_student },
-      { rollno: 2, name: 'Yogini Pambhar', address: 'Delhi-Palace', standard: 'Standard 12', income: 'Rs.3,00000', district: 'Rajkot', image: female_student },
-      { rollno: 4, name: 'Dhruv Patel', address: 'Don PGs', standard: 'Standard 12', income: 'Rs.60,000', district: 'Valsad', image: male_student },
-      { rollno: 5, name: 'Pari Parikh', address: 'Bopal ', standard: 'Standard 12', income: 'Rs.3,00000', district: 'Ahmedabad', image: female_student },
-      { rollno: 6, name: 'Vraj Patel', address: 'Maninagar', standard: 'Standard 12', income: 'Rs.60,000', district: 'Rajkot', image: male_student },
-      { rollno: 10, name: 'Varma Tushar', address: 'Kathaiwadi Hostel', standard: 'Standard 12', income: 'Rs.60,000', district: 'Bhavnagar', image: male_student },
-      // Add more cards as needed
-    ],
-    'Standard 2': [
-      { rollno: 1, name: 'Raju Seth', address: 'Pawdar Galli', standard: 'Standard 2', income: 'Rs.2,00,00,000', district: 'Mumbai' },
-      { rollno: 2, name: 'Kiara Raval', address: 'New Ranip', standard: 'Standard 2', income: 'Rs.50,000', district: 'Ahmedabad' },
-      { rollno: 4, name: 'Karan Varma', address: 'Juni Vav', standard: 'Standard 2', income: 'Rs.5000', district: 'Sabarkatha' },
-      // Add more cards as needed
-    ],
-    // node vaprisu re bapu sethalal
-  };
-
+  
   return (
     <div className='std_wise_container'>
       <div className="toggle-nav" onClick={toggleNavbar}>
@@ -48,15 +27,15 @@ const Std_wise_details = () => {
 
       {navVisible && <Sd_sub_nav />}
       {activeStandard ? (
-        <div className='sd_grid_container'>
-          <div className='active_card'>
-            {/* active card ne load karavanu heavy js */}
-            {cardData[activeStandard].map(card => (
-              <School_Card key={card.rollno}  {...card} />
-            ))}
-          </div>
-          <button className='back_btn' onClick={() => setActiveStandard(null)}>Back</button>
-        </div>
+       <div className='sd_grid_container'>
+       <div className='active_card'>
+         {/* active card ne load karavanu heavy js */}
+         {cardData[activeStandard].map(card => (
+           <School_Card key={card.rollno}  {...card} />
+         ))}
+       </div>
+       <button className='back_btn' onClick={() => setActiveStandard(null)}>Back</button>
+     </div>
       ) : (
         <div className='standard-list'>
           <div className='primary'>

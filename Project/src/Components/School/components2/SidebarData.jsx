@@ -7,37 +7,37 @@ import { IoIosPaper, IoMdHelpCircle, IoMdPeople } from 'react-icons/io'
 export const SidebarData = [
     {
         title: 'Home',
-        path: '/home',
+        path: '/student-details/home',
         icon: <AiFillHome />,
         cName: 'nav-text'
     },
     {
         title: 'Report',
-        path: '/report',
+        path: '/student-details/report',
         icon: <IoIosPaper />,
         cName: 'nav-text'
     },
     {
         title: 'Products',
-        path: '/products',
+        path: '/student-details/products',
         icon: <FaCartPlus />,
         cName: 'nav-text'
     },
     {
         title: 'Team',
-        path: '/team',
+        path: '/student-details/team',
         icon: <IoMdPeople />,
         cName: 'nav-text'
     },
     {
         title: 'Messages',
-        path: '/messages',
+        path: '/student-details/messages',
         icon: <FaEnvelopeOpenText />,
         cName: 'nav-text'
     },
     {
         title: 'Support',
-        path: '/support',
+        path: '/student-details/support',
         icon: <IoMdHelpCircle />,
         cName: 'nav-text'
     }
