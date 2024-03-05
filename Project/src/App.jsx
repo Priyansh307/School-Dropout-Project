@@ -9,21 +9,24 @@ import Logingov from './Pages/Logingov';
 import Loginschool from './Pages/Loginschool';
 import Student_full_details from './Components/School/Student_full_details';
 import Std_wise_details from './Components/School/Std_wise_details';
+import Schoolprofile from './Components/School/Schoolprofile';
+import Studentprofile from './Components/School/Studentprofile';
+import Droputtap from './Components/School/Droputtap';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home_pages/>} />
-        <Route path="/loginschlogin" element={<Loginschool/>} />
-        <Route path="/loginschhome" element={<Schoolhome/>} />
-        <Route path="/logindishome" element={<Districthome/>} />
-        <Route path="/logingov" element={<Govhome/>} />
-        <Route path="/logindislogin" element={<Logindistrict/>} />
-        <Route path="/logingovlogin" element={<Logingov/>} />
-        <Route path="/student-details/*" element={<Student_full_details/>} />
-        <Route path="/standard-wise-details" element={<Std_wise_details/>} />
+        <Route exact path="/" element={<Home_pages />} />
+        <Route path="/loginschlogin" element={<Loginschool />} />
+        <Route path="/loginschhome/*" element={<Schoolhome />} />
+        <Route path="/logindishome" element={<Districthome />} />
+        <Route path="/logingov" element={<Govhome />} />
+        <Route path="/logindislogin" element={<Logindistrict />} />
+        <Route path="/logingovlogin" element={<Logingov />} />
+        <Route path="/student-details/*" element={<Student_full_details />} />
+
       </Routes>
     </Router>
   );

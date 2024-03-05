@@ -8,7 +8,7 @@ import SuchSujjgov from '../Components/School/SuchSujjgov';
 import Std_wise_details from '../Components/School/Std_wise_details'
 import axios from 'axios';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Routes, Route } from 'react-router-dom';
 
 const Schoolhome = () => {
   // // const navigate1 = useNavigate()
@@ -23,10 +23,10 @@ const Schoolhome = () => {
   //         navigate1('/loginschlogin')
   //       }
   //     }
-      
+
   //   })
   // },[])
-  const [content, setContent] = useState('info'); 
+  const [content, setContent] = useState('info');
 
   const showContent = (contentType) => {
     setContent(contentType);
@@ -36,36 +36,18 @@ const Schoolhome = () => {
     <>
       <Navbarschool showContent={showContent} />
       <div className="content">
-        {content === 'info' && (
-          <div>
-          <Schoolprofile />
-          </div>
-        )}
-        {content === 'dropout-form' && (
-          <div>
-            <Studentprofile />
-          </div>
-        )}
-        {content === 'dropout-view' && (
-          <div>
-           <Droputtap />
-          </div>
-        )}
-        {content === 'total_students' && (
-          <div>
-          <Std_wise_details/>
-          </div>
-        )}
-        {content === 'suggestion' && (
-          <div>
-           <SuhSujjdis />
-          </div>
-        )}
-        {content === 'suggestiongtos' && (
-          <div>
-           <SuchSujjgov />
-          </div>
-        )}
+         {/* Declaring routes */}
+        <Routes>
+          <Route index element={<Schoolprofile />} />
+          <Route path='dropout-form' element={<Studentprofile />} />
+          <Route path='dropout-table' element={<Droputtap />} />
+          <Route path='std-dashboard' >
+            <Route index element={<Std_wise_details />} />
+          </Route>
+            <Route path='sugg_dis' element={<SuhSujjdis/>}/>
+            <Route path='sugg_gov' element={<SuchSujjgov/>}/>
+        </Routes>
+         {/* Ending routes */}
       </div>
     </>
   );
