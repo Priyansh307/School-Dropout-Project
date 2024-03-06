@@ -1,7 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './Districtpro.css'
 
 const Districttab = () => {
+
+    const [students, setStudents] = useState([]);
+    const [filteredStudents, setFilteredStudents] = useState([]);
+    const [userDistrict, setUserDistrict] = useState('');
+    const [username, setUsername] = useState('');
+  const filterByClass = (event) => {
+    const selectedClass = event.target.value;
+    // Implement filtering logic here
+  };
+
+  useEffect(() => {
+    // Fetch student data from the server
+    const fetchStudents = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await axios.get('http://localhost:3000/auth/diststudents', {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+        setStudents(response.data.students);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    const fetchUserData = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const response = await axios.get('http://localhost:3000/auth/verify', {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          });
+          setUserDistrict(response.data.district);
+          setUsername(response.data.username);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+    fetchStudents();
+    fetchUserData();
+}, []);
   return (
     <>
      <div className="container_district">
@@ -35,35 +78,38 @@ const Districttab = () => {
                        <th>Area</th>
                        <th>City</th>
                        <th>Income</th>
-                       <th>Reason</th>
+                       {/* <th>Reason</th> */}
                        <th>Father Occupation</th>
                        <th>School Name</th>
                        <th>State</th>
                        <th>Student Roll No</th>
-                       <th>Year</th>
+                       {/* <th>Year</th> */}
                    </tr>
                </thead>
                <tbody>
+              {students.map((student) => (
+                <tr key={student._id}>
+                  <td>{student.name}</td>
+                  <td>{student.age}</td>
+                  <td>{student.gender}</td>
+                  <td>{student.caste}</td>
+                  <td>{student.s_category}</td>
+                  <td>{student.Distance}</td>
+                  <td>{student.area}</td>
+                  <td>{student.city}</td>
+                  <td>{student.income}</td>
+                  {/* <td>{student.reason}</td> */}
+                  <td>{student.foccupation}</td>
+                  <td>{student.user.username}</td>
+
+                  <td>{student.mystate}</td>
+                  <td>{student.stdrollno}</td>
                   
-                   <tr> 
-                   <td>Mahesh</td>
-                  <td>18</td>
-                  <td>Male</td>
-                  <td>open</td>
-                  <td>Private</td>
-                  <td>5</td>
-                  <td>Rajkot</td>
-                  <td>Rajkot</td>
-                  <td>50000</td>
-                  <td>health</td>
-                  <td>Farmer</td>
-                  <td>Divine</td>
-                  <td>Gujarat</td>
-                  <td>25</td>
-                  <td>2022</td>
-                   </tr>  
-                   
-               </tbody>
+                  {/* <td>{student.year}</td> */}
+                  {/* <td>Delete</td> */}
+                </tr>
+              ))}
+            </tbody>
            </table>
        </div>
       

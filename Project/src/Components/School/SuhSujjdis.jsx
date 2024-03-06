@@ -3,8 +3,8 @@ import '../School/Schoolprofile.css'
 
 const SuhSujjdis = () => {
   return (
-    <div class="container_school">
-        <div class="sub-container_school">
+    <div className="container_school">
+        <div className="sub-container_school">
                 <h2>Suggestion From District</h2>
             <table className='table_school_com'>
                 <thead>

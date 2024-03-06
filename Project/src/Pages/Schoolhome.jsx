@@ -26,15 +26,10 @@ const Schoolhome = () => {
 
   //   })
   // },[])
-  const [content, setContent] = useState('info');
-
-  const showContent = (contentType) => {
-    setContent(contentType);
-  };
-
+  
   return (
     <>
-      <Navbarschool showContent={showContent} />
+      <Navbarschool />
       <div className="content">
          {/* Declaring routes */}
         <Routes>

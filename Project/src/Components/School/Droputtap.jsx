@@ -1,32 +1,53 @@
-import React from 'react'
-import '../School/Schoolprofile.css'
-
+import React, { useEffect, useState } from 'react';
+import '../School/Schoolprofile.css';
+import axios from 'axios';
 
 const Droputtap = () => {
+  const [students, setStudents] = useState([]);
+
+  const filterByClass = (event) => {
+    const selectedClass = event.target.value;
+    // Implement filtering logic here
+  };
+
+  useEffect(() => {
+    // Fetch student data from the server
+    const fetchStudents = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await axios.get('http://localhost:3000/auth/students', {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+        setStudents(response.data.students);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchStudents();
+}, []);
+
+
   return (
     <>
-    
-    <div className="container_school">
-       
-    <div className="class-filter_school">
-       
-        <select id="class-select" onchange="filterByClass()">
+      <div className="container_school">
+        <div className="class-filter_school">
+          <select id="class-select" onChange={filterByClass}>
             <option value="all">All Classes</option>
             <option value="name">Name</option>
-            <option value="age">age</option>
-            <option value="class">class</option>
-            <option value="gender">gender</option>
-            <option value="area">area</option>
-            <option value="city">city</option>
-            <option value="income">income</option>
-            <option value="reason">reason for leaving</option>
-          
-        </select>
-
-        
-    </div>
-    <div className="sub-container_school_droptab">
-        <table className="table_school_com table_school_com-bordered table_school_com-hover">
+            <option value="age">Age</option>
+            <option value="class">Class</option>
+            <option value="gender">Gender</option>
+            <option value="area">Area</option>
+            <option value="city">City</option>
+            <option value="income">Income</option>
+            <option value="reason">Reason for Leaving</option>
+          </select>
+        </div>
+        <div className="sub-container_school_droptab">
+          <table className="table_school_com table_school_com-bordered table_school_com-hover">
             <thead>
               <tr>
                 <th>Name</th>
@@ -38,40 +59,41 @@ const Droputtap = () => {
                 <th>Area</th>
                 <th>City</th>
                 <th>Income</th>
-                <th>Reason</th>
+                {/* <th>Reason</th> */}
                 <th>Father Occupation</th>
-                <th>School Name</th>
+                
                 <th>State</th>
-                <th>Student Roll No</th>
-                <th>Year</th>
+                <th>Roll No</th>
+                {/* <th>Year</th> */}
               </tr>
             </thead>
             <tbody>
-             
-                <tr>
-                  <td>Mahesh</td>
-                  <td>18</td>
-                  <td>Male</td>
-                  <td>open</td>
-                  <td>Private</td>
-                  <td>5</td>
-                  <td>Rajkot</td>
-                  <td>Rajkot</td>
-                  <td>50000</td>
-                  <td>health</td>
-                  <td>Farmer</td>
-                  <td>Divine</td>
-                  <td>Gujarat</td>
-                  <td>25</td>
-                  <td>2022</td>
-                  <td>Delete</td>
-                </tr>       
+              {students.map((student) => (
+                <tr key={student._id}>
+                  <td>{student.name}</td>
+                  <td>{student.age}</td>
+                  <td>{student.gender}</td>
+                  <td>{student.caste}</td>
+                  <td>{student.s_category}</td>
+                  <td>{student.Distance}</td>
+                  <td>{student.area}</td>
+                  <td>{student.city}</td>
+                  <td>{student.income}</td>
+                  {/* <td>{student.reason}</td> */}
+                  <td>{student.foccupation}</td>
+          
+                  <td>{student.mystate}</td>
+                  <td>{student.stdrollno}</td>
+                  {/* <td>{student.year}</td> */}
+                  {/* <td>Delete</td> */}
+                </tr>
+              ))}
             </tbody>
-          </table>    
-    </div>
-</div>
+          </table>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Droputtap
+export default Droputtap;

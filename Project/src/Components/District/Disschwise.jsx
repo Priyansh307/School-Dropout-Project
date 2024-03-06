@@ -1,33 +1,59 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
+import Chart from 'chart.js/auto';
 import './Districtpro.css'
+import axios from 'axios';
 
+
+// Disschwise component
 const Disschwise = () => {
+  // State variables to store the school-wise statistics
+  const [schoolStatistics, setSchoolStatistics] = useState([]);
+
+  useEffect(() => {
+    // Fetch school-wise statistics
+    const fetchSchoolStatistics = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/auth/school-wise-dropout-statistics');
+        setSchoolStatistics(response.data.schoolStatistics);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchSchoolStatistics();
+  }, []);
+
   return (
     <div className="container_district_chart">
-
-    <div className="drop_out_school_wise_container_district">
+      <div className="drop_out_school_wise_container_district">
         <h1 className="dr_title_district">School Wise Dropout Statistics</h1>
         <table className='table_district'>
+          <thead>
             <tr>
-                <td className="t_title_distict"> School Name </td>
-                <td className="t_title_distict">Total dropout studnet</td>
-                <td className="t_title_distict">Total Male dropout </td>
-                <td className="t_title_distict">Total Female dropout </td>
-                <td className="t_title_distict">Total Students</td>
-                <td className="t_title_distict">Dropout Ratio</td>
-            </tr>        
-            <tr>
-                <td>Divin</td>
-                <td>3</td>
-                <td>2</td>
-                <td>1</td>
-                <td>6</td>
-                <td>50%</td>
-            </tr>                
-        </table>   
+              <th className="t_title_distict">School Name</th>
+              <th className="t_title_distict">Total Dropout Students</th>
+              <th className="t_title_distict">Total Male Dropout Students</th>
+              <th className="t_title_distict">Total Female Dropout Students</th>
+              <th className="t_title_distict">Total Students</th>
+              <th className="t_title_distict">Dropout Ratio</th>
+            </tr>
+          </thead>
+          <tbody>
+            {schoolStatistics.map((school) => (
+              <tr key={school._id}>
+                <td>{school.name}</td>
+                <td>{school.totalDropoutStudents}</td>
+                <td>{school.totalMaleDropout}</td>
+                <td>{school.totalFemaleDropout}</td>
+                <td>{school.totalStudents}</td>
+                <td>{school.dropoutRatio}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
-</div>
-  )
-}
+  );
+};
 
-export default Disschwise
+export default Disschwise;
