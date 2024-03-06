@@ -12,24 +12,24 @@ import { Link } from "react-router-dom";
 
 const Loginschool = () => {
 
-  // const navigate1 = useNavigate()
-  // axios.defaults.withCredentials = true;
-  // useEffect(() =>{
-  //   axios.get('http://localhost:3000/auth/verify')
-  //   .then(res=>{
-  //     if(res.data.status)
-  //     {
-  //       console.log("status is valid")
-  //       if(response.data.school)
-  //       {
-  //         console.log("school is valid")
-  //         navigate1('/loginschhome')
-  //       }
-  //     }
+  const navigate1 = useNavigate()
+  axios.defaults.withCredentials = true;
+  useEffect(() =>{
+    axios.get('http://localhost:3000/auth/verify')
+    .then(res=>{
+      if(res.data.status)
+      {
+        console.log("status is valid")
+        if(response.data.school)
+        {
+          console.log("school is valid")
+          navigate1('/loginschhome')
+        }
+      }
       
-  //   })
+    })
 
-  // },[])
+  },[])
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
