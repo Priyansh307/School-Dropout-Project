@@ -4,8 +4,6 @@ const Home = () => {
  
   return (
     <>
-    
-      
       <div>
       <h2>Personal Info</h2>
       <table>
@@ -53,7 +51,7 @@ const Home = () => {
             <td>Farmer</td>
           </tr>
           <tr>
-            <td>Icome</td>
+            <td>Income</td>
             <td>50000</td>
           </tr>
         </tbody>
@@ -66,7 +64,6 @@ const Home = () => {
         <h3>Upload Image</h3>
         <button>Upload</button>
         <button>Save</button>
-       
       </div>
 
       <div>
@@ -89,18 +86,18 @@ const Home = () => {
           </tr>
           <tr>
             <td>Address</td>
-            <td>Ahembadab ghuma gam "Pariyansh Nivass" 36005</td>
+            <td>Ahembadab ghuma gam "Priyansh Nivass" 36005</td>
           </tr>
           <tr>
             <td>Mobile No</td>
             <td>786291122222</td>
           </tr>
           <tr>
-            <td>Adhar no</td>
+            <td>Aadhar no</td>
             <td>252525252525</td>
           </tr>
           <tr>
-            <td>Mother Occupassion</td>
+            <td>Mother Occupation</td>
             <td>House wife</td>
           </tr>
           <tr>
@@ -108,7 +105,7 @@ const Home = () => {
             <td>Priyansh@gmail.com</td>
           </tr>
           <tr>
-            <td>Shill</td>
+            <td>Skill</td>
             <td>Football , Kabbadi</td>
           </tr>
           <tr>
@@ -122,11 +119,8 @@ const Home = () => {
 
     </div>
 
-
-   
     </>
-      
-    
+        
   )
 }
 
