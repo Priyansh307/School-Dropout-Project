@@ -1,0 +1,26 @@
+.per_info_table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.per_info_table h2{
+    padding: 5px;
+    color: black;
+}
+
+.per_info_table th{
+    color: black;
+    background: rgb(118, 230, 230);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.per_info_table td{
+    background: #111111;
+    color: white;
+    border: none;
+    font-weight: 300;
+}

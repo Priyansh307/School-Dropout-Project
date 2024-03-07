@@ -1,10 +1,11 @@
 import React from 'react'
+import './CSS/std_home.css'
 
 const Home = () => {
  
   return (
     <>
-      <div>
+      <div className='per_info_table'>
       <h2>Personal Info</h2>
       <table>
         <thead>
