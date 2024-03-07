@@ -246,6 +246,71 @@ const Studentprofile = () => {
             onChange={handleChange}
             placeholder="Enter Roll no"
           />
+
+
+
+          {/* i add this basic fields */}
+
+          <label>Address:</label>
+          <input
+            type="text"
+            required
+            placeholder="Enter student's Address"
+          />
+
+          <label>Student Mobile No:</label>
+          <input
+            type="number"
+            required
+            placeholder="Enter student's Mobile No"
+          />
+
+          <label>Student Adhaar No:</label>
+          <input
+            type="number"
+            required
+            placeholder="Enter student's Adhaar No"
+          />
+
+          <label>Student Adhaar No:</label>
+          <input
+            type="number"
+            required
+            placeholder="Enter student's Adhaar No"
+          />
+
+          <label>Mother's Occupation:</label>
+          <input
+            type="text"
+            required
+            placeholder="Enter Mother's occupation"
+          />
+
+          <label>Email Id</label>
+          <input
+            type="text"
+            required
+            placeholder="Enter Email Id"
+          />
+
+          <label>Skill</label>
+          <input
+            type="text"
+            required
+            placeholder="Enter Skill"
+          />
+
+          <label>Birth Date</label>
+          <input
+            type="text"
+            required
+            placeholder="Enter Birth Date"
+          />
+{/*  my change complete */}
+
+
+
+
           <button className="btn_school"
             type="submit"
             name="submit"
