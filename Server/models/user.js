@@ -50,6 +50,7 @@ const studentSchema = new mongoose.Schema({
   name: { type: String, required: true },
   age: { type: Number, required: true },
   gender: { type: String, required: true },
+  // Add the new fields
   caste: { type: String, required: true },
   s_category: { type: String, required: true },
   Distance: { type: Number, required: true },
@@ -60,8 +61,15 @@ const studentSchema = new mongoose.Schema({
   mystate: { type: String, required: true },
   studentstd: { type: String, required: true },
   stdrollno: { type: Number, required: true },
+  address: { type: String, required: true }, // New field
+  mobileNo: { type: Number, required: true }, // New field
+  adhaarNo: { type: Number, required: true }, // New field
+  schoolFees: { type: Number, required: true }, // New field
+  motherOccupation: { type: String, required: true }, // New field
+  emailId: { type: String, required: true }, // New field
+  skill: { type: String, required: true }, // New field
+  birthDate: { type: Date, required: true }, // New field
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'School', required: true },
-  
 });
 
 

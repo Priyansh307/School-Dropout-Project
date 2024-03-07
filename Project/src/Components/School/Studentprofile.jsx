@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import "../School/Schoolprofile.css";
 import axios from "axios";
 
@@ -17,38 +17,26 @@ const Studentprofile = () => {
     mystate: "",
     studentstd: "",
     stdrollno: "",
+    address: "",
+    mobileNo: "",
+    adhaarNo: "",
+    schoolFees: "",
+    motherOccupation: "",
+    emailId: "",
+    skill: "",
+    birthDate: "",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  useEffect(() => {
-    // Fetch current user's data from the server
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://localhost:3000/auth/current-user");
-        const currentUserData = response.data;
-
-        // Update form data with current user's data
-        setFormData({
-          ...formData,
-          ...currentUserData,
-        });
-      } catch(error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:3000/auth/submit-form", formData);
       alert("Form submitted successfully");
-  
+
       // Clear form data after successful submission
       setFormData({
         name: "",
@@ -63,9 +51,17 @@ const Studentprofile = () => {
         foccupation: "",
         mystate: "",
         studentstd: "",
-        stdrollno: ""
+        stdrollno: "",
+        address: "",
+        mobileNo: "",
+        adhaarNo: "",
+        schoolFees: "",
+        motherOccupation: "",
+        emailId: "",
+        skill: "",
+        birthDate: "",
       });
-    } catch(error) {
+    } catch (error) {
       console.error(error);
       alert("Internal server error");
     }
@@ -122,7 +118,13 @@ const Studentprofile = () => {
             required
           />
           <label htmlFor="student-caste">Student Caste:</label>
-          <select id="student-caste" name="caste" value={formData.caste} onChange={handleChange} required>
+          <select
+            id="student-caste"
+            name="caste"
+            value={formData.caste}
+            onChange={handleChange}
+            required
+          >
             <option value="" disabled selected>
               Select Caste
             </option>
@@ -132,7 +134,13 @@ const Studentprofile = () => {
             <option value="st">Scheduled Tribe</option>
           </select>
           <label htmlFor="s_category">School Category</label>
-          <select id="s_category" name="s_category" value={formData.s_category} onChange={handleChange} required>
+          <select
+            id="s_category"
+            name="s_category"
+            value={formData.s_category}
+            onChange={handleChange}
+            required
+          >
             <option value="" disabled selected>
               Select School Category
             </option>
@@ -191,7 +199,13 @@ const Studentprofile = () => {
             placeholder="Enter father's occupation"
           />
           <label htmlFor="mystate">State</label>
-          <select id="mystate" name="mystate" value={formData.mystate} onChange={handleChange} required>
+          <select
+            id="mystate"
+            name="mystate"
+            value={formData.mystate}
+            onChange={handleChange}
+            required
+          >
             <option value="" disabled selected>
               Select State
             </option>
@@ -246,76 +260,87 @@ const Studentprofile = () => {
             onChange={handleChange}
             placeholder="Enter Roll no"
           />
-
-
-
           {/* i add this basic fields */}
-
           <label>Address:</label>
           <input
             type="text"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
             required
             placeholder="Enter student's Address"
           />
-
           <label>Student Mobile No:</label>
           <input
-            type="number"
+            type="tel"
+            name="mobileNo"
+            value={formData.mobileNo}
+            onChange={handleChange}
             required
             placeholder="Enter student's Mobile No"
           />
-
           <label>Student Adhaar No:</label>
           <input
             type="number"
+            name="adhaarNo"
+            value={formData.adhaarNo}
+            onChange={handleChange}
             required
             placeholder="Enter student's Adhaar No"
           />
-
-          <label>Student Adhaar No:</label>
+          <label>School Fees :</label>
           <input
             type="number"
+            name="schoolFees"
+            value={formData.schoolFees}
+            onChange={handleChange}
             required
-            placeholder="Enter student's Adhaar No"
+            placeholder="Enter student's School Fees"
           />
-
           <label>Mother's Occupation:</label>
           <input
             type="text"
+            name="motherOccupation"
+            value={formData.motherOccupation}
+            onChange={handleChange}
             required
             placeholder="Enter Mother's occupation"
           />
-
           <label>Email Id</label>
           <input
-            type="text"
+            type="email"
+            name="emailId"
+            value={formData.emailId}
+            onChange={handleChange}
             required
             placeholder="Enter Email Id"
           />
-
           <label>Skill</label>
           <input
             type="text"
+            name="skill"
+            value={formData.skill}
+            onChange={handleChange}
             required
             placeholder="Enter Skill"
           />
-
           <label>Birth Date</label>
           <input
-            type="text"
+            type="date"
+            name="birthDate"
+            value={formData.birthDate}
+            onChange={handleChange}
             required
-            placeholder="Enter Birth Date"
           />
-{/*  my change complete */}
-
-
-
-
-          <button className="btn_school"
+          {/* Submit button */}
+          <button
+            className="btn_school"
             type="submit"
             name="submit"
-            value="Submit">Submit</button>
-          
+            value="Submit"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
