@@ -7,7 +7,7 @@ import { IoIosPaper, IoMdHelpCircle, IoMdPeople } from 'react-icons/io'
 export const SidebarData = [
     {
         title: 'Home',
-        path: '/student-details/home',
+        path: '/student-details',
         icon: <AiFillHome />,
         cName: 'nav-text'
     },

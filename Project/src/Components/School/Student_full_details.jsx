@@ -11,8 +11,13 @@ const Student_full_details = () => {
     <>
       <Navbarschmo />
       <Routes> 
+<<<<<<< HEAD
           <Route path='/home' element={<Home />} /> 
           <Route path='/testMark' element={<Testmark />} />
+=======
+          <Route index element={<Home />} /> 
+          <Route path='/products' element={<Product />} />
+>>>>>>> b7febb392379d765e41df9ccd2cb43a07aa28984
           <Route path='/report' element={<Report />} />
       </Routes>
     </>
