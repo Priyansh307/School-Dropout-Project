@@ -51,14 +51,14 @@
     box-sizing: border-box;
     border-radius: 0px 0px 15px 15px;
     padding-left: 40px;
-    background-color: #04AA6D;
+    background-color: white;
 }
 
 .basic_info p {
 
     font-size: 19px;
     padding-top: 8px;
-    color: white;
+    color: #02ab6d;
 }
 
 
