@@ -64,3 +64,74 @@
     margin-left: 16px;
 }
 
+/* TestMark,css */
+
+.content_basic_std_dashboard {
+    transition: margin-left 350ms;
+    /* border:  2px solid black; */
+}
+  
+  .nav-menu.active + .content_basic_std_dashboard {
+    margin-left: 250px; /* Adjust this value according to your sidebar width */
+  }
+
+  .card_test_mark_get {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .table_in_test_mark{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .card_test_mark_get_12 {
+    display: flex;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .performace_text_xontainer{
+    width: 27%;
+    height: 196px;
+    border-right: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .chart_test_peformance{
+    width: 35%;
+    height: 196px;
+    border-right: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .result_analysis_work_here{
+    width: 38%;
+    height: 196px;
+    /* border: 2px solid green; */
+    
+
+  }
+  .pargarph_in_result{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+
+  }
+ .p_in_rane_us{
+    font-size: 20px;
+ }
+ 
