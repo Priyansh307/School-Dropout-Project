@@ -20,7 +20,7 @@ const Home_pages = () => {
             District
           </div>
         </Link>
-        <Link to="/logingovlogin">
+        <Link to="/logingov">
           <div className="Government_img">
             <img src={gov_img} alt="" />
             Government

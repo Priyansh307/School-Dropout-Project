@@ -9,6 +9,7 @@ import Std_wise_details from '../Components/School/Std_wise_details'
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useNavigate, Routes, Route } from 'react-router-dom';
+import Sch_test from '../Components/School/Sch_test';
 
 const Schoolhome = () => {
   // // const navigate1 = useNavigate()
@@ -38,7 +39,13 @@ const Schoolhome = () => {
           <Route path='dropout-table' element={<Droputtap />} />
           <Route path='std-dashboard' >
             <Route index element={<Std_wise_details />} />
+           
           </Route>
+          <Route path='mark-section' >
+            <Route index element={<Sch_test />} />
+           
+          </Route>
+
             <Route path='sugg_dis' element={<SuhSujjdis/>}/>
             <Route path='sugg_gov' element={<SuchSujjgov/>}/>
         </Routes>
