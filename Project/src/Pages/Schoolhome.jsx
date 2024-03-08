@@ -43,7 +43,7 @@ const Schoolhome = () => {
           </Route>
           <Route path='mark-section' >
             <Route index element={<Sch_test />} />
-           
+  
           </Route>
 
             <Route path='sugg_dis' element={<SuhSujjdis/>}/>

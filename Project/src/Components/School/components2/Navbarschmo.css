@@ -128,10 +128,17 @@
     justify-content: center;
     align-items: center;
    
-    
-
   }
  .p_in_rane_us{
     font-size: 20px;
  }
  
+/* Home Section */
+.home_grid_container {
+  transition: margin-left 350ms;
+  /* border:  2px solid black; */
+}
+
+.nav-menu.active + .home_grid_container {
+  margin-left: 250px; 
+}
