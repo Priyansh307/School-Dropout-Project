@@ -483,7 +483,7 @@ router.get("/income-wise-student-counts", async (req, res) => {
 
 // Backend code
 // Backend code
-router.get('/school-wise-dropout-statistics', async (req, res) => {
+router.get("/school-wise-dropout-statistics", async (req, res) => {
   try {
     const token = req.cookies.token;
     if (!token) {
@@ -495,53 +495,62 @@ router.get('/school-wise-dropout-statistics', async (req, res) => {
 
     const schools = await School.find({ isSchool: true });
 
-    const schoolStatistics = await Promise.all(schools.map(async (school) => {
-      const totalStudents = await Student.countDocuments({
-        user: school._id,
-        city: {
-          $regex: new RegExp(userDistrict, "i"),
-        },
-      });
-      const totalMaleDropout = await Student.countDocuments({
-        user: school._id,
-        gender: "male",
-        city: {
-          $regex: new RegExp(userDistrict, "i"),
-        },
-      });
-      const totalFemaleDropout = await Student.countDocuments({
-        user: school._id,
-        gender: "female",
-        city: {
-          $regex: new RegExp(userDistrict, "i"),
-        },
-      });
-      const totalDropoutStudents = await Student.countDocuments({
-        user: school._id,
-        city: {
-          $regex: new RegExp(userDistrict, "i"),
-        },
-      });
-      const dropoutRatio = (totalDropoutStudents / totalStudents) * 100;
+    const schoolStatistics = await Promise.all(
+      schools.map(async (school) => {
+        const totalStudents = await Student.countDocuments({
+          user: school._id,
+          city: {
+            $regex: new RegExp(userDistrict, "i"),
+          },
+        });
+        const totalMaleDropout = await Student.countDocuments({
+          user: school._id,
+          gender: "male",
+          city: {
+            $regex: new RegExp(userDistrict, "i"),
+          },
+        });
+        const totalFemaleDropout = await Student.countDocuments({
+          user: school._id,
+          gender: "female",
+          city: {
+            $regex: new RegExp(userDistrict, "i"),
+          },
+        });
+        const totalDropoutStudents = await Student.countDocuments({
+          user: school._id,
+          city: {
+            $regex: new RegExp(userDistrict, "i"),
+          },
+        });
+        const dropoutRatio = (totalDropoutStudents / totalStudents) * 100;
 
-      // Filter out schools with all zero values
-      if (totalStudents === 0 && totalMaleDropout === 0 && totalFemaleDropout === 0 && totalDropoutStudents === 0) {
-        return null;
-      }
+        // Filter out schools with all zero values
+        if (
+          totalStudents === 0 &&
+          totalMaleDropout === 0 &&
+          totalFemaleDropout === 0 &&
+          totalDropoutStudents === 0
+        ) {
+          return null;
+        }
 
-      return {
-        _id: school._id,
-        name: school.username,
-        totalStudents,
-        totalMaleDropout,
-        totalFemaleDropout,
-        totalDropoutStudents,
-        dropoutRatio: `${dropoutRatio.toFixed(2)}%`,
-      };
-    }));
+        return {
+          _id: school._id,
+          name: school.username,
+          totalStudents,
+          totalMaleDropout,
+          totalFemaleDropout,
+          totalDropoutStudents,
+          dropoutRatio: `${dropoutRatio.toFixed(2)}%`,
+        };
+      })
+    );
 
     // Filter out null values
-    const filteredSchoolStatistics = schoolStatistics.filter(stat => stat !== null);
+    const filteredSchoolStatistics = schoolStatistics.filter(
+      (stat) => stat !== null
+    );
 
     return res.json({ schoolStatistics: filteredSchoolStatistics });
   } catch (err) {
@@ -550,7 +559,24 @@ router.get('/school-wise-dropout-statistics', async (req, res) => {
   }
 });
 
+router.get("/studentcard", verifyUser, async (req, res) => {
+  try {
+    // const standard = req.params.standard;
+    // console.log('Received request for standard:');
+    const user = req.user;
 
+    // Query the database to fetch student data for the specified standard
+    const students = await Student.find({ studentstd: 12,user: user._id }); // Use 'standard' instead of 'studentstd'
+    // console.log("Fetched students:", students);
 
+    // Return the student data as JSON response
+    res.json({ success: true, students });
+  } catch (err) {
+    console.error(err);
+    res
+      .status(500)
+      .json({ success: false, message: "Error fetching student data" });
+  }
+});
 
 export { router as SchoolRouter };
