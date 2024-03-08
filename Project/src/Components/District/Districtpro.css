@@ -24,14 +24,8 @@
     height: auto;
     box-sizing: border-box;
 }
-.t_title_distict,label{
+.t_title_distict{
     font-weight: bold;
-}
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-size: 16px;
 }
 .form_district {
     background-color: #F0F3F4;
@@ -297,14 +291,7 @@ select{
         table .ins_table_district{
             font-size: small;
         }
-        input {
-            padding: 10px;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+        
         .inst_text_district{
             font-size: small;
         }
@@ -321,29 +308,7 @@ select{
             
         }
         
-        label {
-            display: block;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-        input[type="text"],
-        input[type="number"],
-        input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-        }
-        input[type="submit"] {
-            background-color: #0d192edb;
-            color: white;
-            font-size: 16px;
-            padding: 15px;
-            margin-top: 10px;
-            border: none;
-            cursor: pointer;
-        }
+        
         
         
         
@@ -361,9 +326,6 @@ select{
 }
 .active-container {
     display: block;
-}
-label #student-caste{
-    padding: 10px;
 }
 section{
     padding: 10px;
@@ -387,14 +349,7 @@ td .pfp{
     width: unset;
     margin: 10px 5px 20px 0px;
   }
-input{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
-label {
-    display: block;
-    font-weight: 600;
-    margin-top: 10px;
-}
+
+
 

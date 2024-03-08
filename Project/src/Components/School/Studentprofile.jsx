@@ -76,27 +76,29 @@ const Studentprofile = () => {
           onSubmit={handleSubmit}
         >
           <h2>Student Profile Form</h2>
-          <label htmlhtmlFor="student-name">Student Name:</label>
+          <label htmlhtmlFor="student-name" className="school_label_work_it">Student Name:</label>
           <input
             type="text"
             id="student-name"
             name="name"
+            className="input_school_from_input"
             value={formData.name}
             onChange={handleChange}
             required
             placeholder="Enter student's name"
           />
-          <label htmlFor="student-age">Student Age:</label>
+          <label htmlFor="student-age" className="school_label_work_it">Student Age:</label>
           <input
             type="number"
             id="student-age"
             name="age"
+            className="input_school_from_input"
             value={formData.age}
             onChange={handleChange}
             required
             placeholder="Enter student's age"
           />
-          <label>Student Gender:</label>
+          <label className="school_label_work_it">Student Gender:</label>
           Male
           <input
             type="radio"
@@ -117,7 +119,7 @@ const Studentprofile = () => {
             onChange={handleChange}
             required
           />
-          <label htmlFor="student-caste">Student Caste:</label>
+          <label htmlFor="student-caste" className="school_label_work_it">Student Caste:</label>
           <select
             id="student-caste"
             name="caste"
@@ -133,7 +135,7 @@ const Studentprofile = () => {
             <option value="sc">Scheduled Caste</option>
             <option value="st">Scheduled Tribe</option>
           </select>
-          <label htmlFor="s_category">School Category</label>
+          <label htmlFor="s_category" className="school_label_work_it">School Category</label>
           <select
             id="s_category"
             name="s_category"
@@ -148,57 +150,62 @@ const Studentprofile = () => {
             <option value="Government">Government</option>
             <option value="SemiGovernment">SemiGovernment</option>
           </select>
-          <label htmlFor="Distance">Distance Form School:</label>
+          <label htmlFor="Distance" className="school_label_work_it">Distance Form School:</label>
           <input
             type="number"
             id="Distance"
             name="Distance"
+            className="input_school_from_input"
             value={formData.Distance}
             onChange={handleChange}
             required
             placeholder="Enter Distance Form School"
           />
-          <label htmlFor="student-area">Student Area:</label>
+          <label htmlFor="student-area" className="school_label_work_it">Student Area:</label>
           <input
             type="text"
             id="student-area"
             name="area"
             required
+            className="input_school_from_input"
             value={formData.area}
             onChange={handleChange}
             placeholder="Enter student's area"
           />
-          <label htmlFor="student-city">Student City:</label>
+          <label htmlFor="student-city" className="school_label_work_it">Student City:</label>
           <input
             type="text"
             id="student-city"
             name="city"
+            className="input_school_from_input"
             required
             value={formData.city}
             onChange={handleChange}
             placeholder="Enter student's city"
           />
-          <label htmlFor="household-income">Household Income:</label>
+          <label htmlFor="household-income" className="school_label_work_it">Household Income:</label>
           <input
             type="number"
             id="household-income"
             name="income"
+            className="input_school_from_input"
             required
             value={formData.income}
             onChange={handleChange}
             placeholder="Enter household income"
           />
-          <label htmlFor="father-occupation">Father's Occupation:</label>
+          <label htmlFor="father-occupation" className="school_label_work_it">Father's Occupation:</label>
           <input
             type="text"
             id="father-occupation"
             name="foccupation"
+            className="input_school_from_input"
             required
             value={formData.foccupation}
             onChange={handleChange}
             placeholder="Enter father's occupation"
           />
-          <label htmlFor="mystate">State</label>
+          <label htmlFor="mystate" className="school_label_work_it">State</label>
           <select
             id="mystate"
             name="mystate"
@@ -240,20 +247,22 @@ const Studentprofile = () => {
             <option value="West Bengal">West Bengal</option>
             <option value="Delhi">Delhi</option>
           </select>
-          <label htmlFor="studentstd">Student Standard</label>
+          <label htmlFor="studentstd" className="school_label_work_it">Student Standard</label>
           <input
             type="text"
             id="studentstd"
             name="studentstd"
+            className="input_school_from_input"
             required
             value={formData.studentstd}
             onChange={handleChange}
             placeholder="Enter Student Standard"
           />
-          <label htmlFor="stdrollno">Roll No</label>
+          <label htmlFor="stdrollno" className="school_label_work_it">Roll No</label>
           <input
             type="number"
             id="stdrollno"
+            className="input_school_from_input"
             name="stdrollno"
             required
             value={formData.stdrollno}
@@ -261,73 +270,81 @@ const Studentprofile = () => {
             placeholder="Enter Roll no"
           />
           {/* i add this basic fields */}
-          <label>Address:</label>
+          <label className="school_label_work_it">Address:</label>
           <input
             type="text"
             name="address"
+            className="input_school_from_input"
             value={formData.address}
             onChange={handleChange}
             required
             placeholder="Enter student's Address"
           />
-          <label>Student Mobile No:</label>
+          <label className="school_label_work_it">Student Mobile No:</label>
           <input
             type="tel"
             name="mobileNo"
+            className="input_school_from_input"
             value={formData.mobileNo}
             onChange={handleChange}
             required
             placeholder="Enter student's Mobile No"
           />
-          <label>Student Adhaar No:</label>
+          <label className="school_label_work_it">Student Adhaar No:</label>
           <input
             type="number"
             name="adhaarNo"
+            className="input_school_from_input"
             value={formData.adhaarNo}
             onChange={handleChange}
             required
             placeholder="Enter student's Adhaar No"
           />
-          <label>School Fees :</label>
+          <label className="school_label_work_it">School Fees :</label>
           <input
             type="number"
             name="schoolFees"
+            className="input_school_from_input"
             value={formData.schoolFees}
             onChange={handleChange}
             required
             placeholder="Enter student's School Fees"
           />
-          <label>Mother's Occupation:</label>
+          <label className="school_label_work_it">Mother's Occupation:</label>
           <input
             type="text"
             name="motherOccupation"
+            className="input_school_from_input"
             value={formData.motherOccupation}
             onChange={handleChange}
             required
             placeholder="Enter Mother's occupation"
           />
-          <label>Email Id</label>
+          <label className="school_label_work_it">Email Id</label>
           <input
             type="email"
             name="emailId"
+            className="input_school_from_input"
             value={formData.emailId}
             onChange={handleChange}
             required
             placeholder="Enter Email Id"
           />
-          <label>Skill</label>
+          <label className="school_label_work_it">Skill</label>
           <input
             type="text"
+            className="input_school_from_input"
             name="skill"
             value={formData.skill}
             onChange={handleChange}
             required
             placeholder="Enter Skill"
           />
-          <label>Birth Date</label>
+          <label className="school_label_work_it">Birth Date</label>
           <input
             type="date"
             name="birthDate"
+            className="input_school_from_input"
             value={formData.birthDate}
             onChange={handleChange}
             required

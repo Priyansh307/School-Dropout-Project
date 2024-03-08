@@ -69,7 +69,9 @@ h2{
     height: 100%;
     box-sizing: border-box;
 }
-input {
+
+/* My change */
+.input_school_from_input {
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
@@ -91,7 +93,7 @@ td{
      margin-top: 10px;
      margin-bottom: 10px;
  }
- label {
+ .school_label_work_it {
      display: block;
      margin-bottom: 5px;
      color: #333;
@@ -154,9 +156,7 @@ td{
 .active-container {
     display: block;
 }
-label #student-caste{
-    padding: 10px;
-}
+
 section{
     padding: 10px;
 }
@@ -164,7 +164,7 @@ section{
 td .pfp{
     margin-left: 40px;
 }
-.t_title,label{
+.t_title{
     font-weight: bold;
  }
 #workpending{
