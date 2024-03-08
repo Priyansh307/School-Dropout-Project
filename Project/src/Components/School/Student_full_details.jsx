@@ -11,7 +11,7 @@ const Student_full_details = () => {
     <>
       <Navbarschmo />
       <Routes> 
-          <Route path='/home' element={<Home />} /> 
+          <Route index element={<Home />} /> 
           <Route path='/products' element={<Product />} />
           <Route path='/report' element={<Report />} />
       </Routes>
