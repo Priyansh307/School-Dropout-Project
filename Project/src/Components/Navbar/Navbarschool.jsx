@@ -28,7 +28,7 @@ const Navbarschool = ({ showContent }) => {
         </div>
         
         <ul className='ul_school_nav'>
-      <li><Link to={"/loginschhome/"} className='a_school_page_nav' onClick={() => showContent('info')}>Home</Link></li>
+      <li><Link to={"/loginschhome/"} className='a_school_page_nav'>Home</Link></li>
       <li><Link to={"/loginschhome/dropout-form"} className='a_school_page_nav' >Profile Form</Link></li>
       <li><Link to={"/loginschhome/dropout-table"} className='a_school_page_nav' >Dropout Table</Link></li>
       <li><Link to={"/loginschhome/std-dashboard"} className='a_school_page_nav' >Student Dashboard</Link></li>
