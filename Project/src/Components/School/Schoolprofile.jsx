@@ -1,40 +1,62 @@
-import React from 'react'
-import '../School/Schoolprofile.css'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "../School/Schoolprofile.css";
 
 const Schoolprofile = () => {
+  const [school, setSchool] = useState(null);
+
+  useEffect(() => {
+    // Fetch school data from the server
+    const fetchSchool = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const response = await axios.get("http://localhost:3000/auth/school", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        setSchool(response.data.schools[0]); // Assuming there's only one school per user
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchSchool();
+  }, []);
+
   return (
     <div className="container_school">
-    <div className="sub-container_school" >
+      <div className="sub-container_school">
         <h2>School Profile</h2>
-        <table className='table_school_com'>
-            <tr>
+        {school && (
+          <table className="table_school_com">
+            <tbody>
+              <tr>
                 <td>School Name</td>
-                <td> Divin </td>
-            </tr>
-            <tr>
+                <td>{school.username}</td>
+              </tr>
+              <tr>
                 <td>School Email</td>
-                <td>divin@gmail,com</td>
-            </tr>
-            <tr>
+                <td>{school.email}</td>
+              </tr>
+              <tr>
                 <td>School District</td>
-                <td>Rajkot</td>
-            </tr>
-            <tr>
+                <td>{school.district}</td>
+              </tr>
+              <tr>
                 <td>School State</td>
-                <td>Gujarat</td>
-            </tr>
-            <tr>
+                <td>{school.state}</td>
+              </tr>
+              <tr>
                 <td>School Category:</td>
-                <td>Private</td>
-            </tr>
-            
-            
-        </table>
-
+                <td>{school.schoolCategory}</td>
+              </tr>
+            </tbody>
+          </table>
+        )}
+      </div>
     </div>
- 
-</div>   
-  )
-}
+  );
+};
 
-export default Schoolprofile
+export default Schoolprofile;

@@ -579,4 +579,20 @@ router.get("/studentcard", verifyUser, async (req, res) => {
   }
 });
 
+
+
+router.get("/school", verifyUser, async (req, res) => {
+  try {
+    // Get user data from the request
+    const user = req.user;
+
+    // Find students added by the current user
+    const schools = await School.find({ username : user.username });
+
+    return res.json({ status: true, schools });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Error processing request" });
+  }
+});
 export { router as SchoolRouter };
