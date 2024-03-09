@@ -10,6 +10,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useNavigate, Routes, Route } from 'react-router-dom';
 import Sch_test from '../Components/School/Sch_test';
+import Attendance_bar from '../Components/School/Attendance_bar';
 
 const Schoolhome = () => {
   // // const navigate1 = useNavigate()
@@ -43,6 +44,10 @@ const Schoolhome = () => {
           </Route>
           <Route path='mark-section' >
             <Route index element={<Sch_test />} />
+  
+          </Route>
+          <Route path='attendace-section' >
+            <Route index element={<Attendance_bar />} />
   
           </Route>
 
