@@ -3,7 +3,7 @@
    height: 100%;
    background-color: #19222a;
    font-family: "Open Sans", Arial, sans-serif;
-   transition: ease 0.5s;
+  transition: all 300ms ease;
  }
 
  .sd_ul {
