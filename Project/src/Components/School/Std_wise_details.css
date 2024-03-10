@@ -5,13 +5,24 @@
    width: 100vw;
  }
 
-
  .standard-list {
-   width: 66vw;
-   margin: 20px auto;
-   display: flex;
-   justify-content: space-around;
- }
+  width: 66vw;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  transition: margin 0.3s ease ; 
+  gap: 40px;
+}
+
+
+.standard-list.nav-visible {
+  margin: 20px 100px;
+}
+
+.standard-list.nav-hidden {
+ margin-left: -30px;
+ 
+}
 
  .standard-list h2 {
    font-size: x-large;
@@ -33,7 +44,6 @@
    color: white;
    font-weight: bold;
    transition: background-color 0.3s, color 0.3s;
-   /* Smooth transition for hover effect */
  }
 
  .standard-box:hover {
@@ -130,7 +140,8 @@
    font-size: 22px;
    padding: 3px;
    cursor: pointer;
-   transition: transform ease 0.5s;
+   transition: transform 3s ease 0.2s;
+   z-index: 2;
  }
 
  .toggle-nav:hover {

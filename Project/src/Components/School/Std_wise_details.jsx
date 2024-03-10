@@ -60,7 +60,7 @@ const Std_wise_details = () => {
         {navVisible ? <IoIosArrowBack /> : <IoIosArrowForward />}
       </div>
 
-      {navVisible && <Sd_sub_nav />}
+      <Sd_sub_nav visible={navVisible} />
       {activeStandard ? (
         <div className="sd_grid_container">
           <div className="active_card">
@@ -74,7 +74,7 @@ const Std_wise_details = () => {
           </button>
         </div>
       ) : (
-        <div className="standard-list">
+        <div className={`standard-list ${navVisible ? 'nav-visible' : 'nav-hidden'}`}>
           <div className="primary">
             <h2>Primary</h2>
             <hr />
