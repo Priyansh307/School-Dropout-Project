@@ -4,7 +4,7 @@ import Navbarschmo from './components2/Navbarschmo';
 import { Route, Routes } from 'react-router-dom'; 
 import Home from './Pages2/Home';
 import Testmark from './Pages2/Testmark';
-import Report from './Pages2/Report';
+import Attendance from './Pages2/Attendance';
 
 const Student_full_details = () => {
   return (
@@ -13,7 +13,7 @@ const Student_full_details = () => {
       <Routes> 
           <Route index element={<Home />} /> 
           <Route path='/testMark' element={<Testmark />} />
-          <Route path='/report' element={<Report />} />
+          <Route path='/Attdance-section' element={<Attendance />} />
       </Routes>
     </>
   );

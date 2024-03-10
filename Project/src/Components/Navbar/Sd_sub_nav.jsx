@@ -11,7 +11,7 @@ const Sd_sub_nav = () => {
       <div className='sd_nav'>
         <ul className='sd_ul'>
             <li><Link to="/loginschhome/std-dashboard">Standard Wise Details</Link></li>
-            <li><Link>Attendance Section</Link></li>
+            <li><Link to="/loginschhome/attendace-section">Attendance Section</Link></li>
             <li><Link to="/loginschhome/mark-section">Marks Section</Link></li>
         </ul>
       </div>

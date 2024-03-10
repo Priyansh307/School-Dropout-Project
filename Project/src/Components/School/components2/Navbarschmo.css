@@ -142,3 +142,120 @@
 .nav-menu.active + .home_grid_container {
   margin-left: 250px; 
 }
+
+/* This is Attadance section css */
+
+.attandance_home_dashboard_outerlayer {
+  transition: margin-left 350ms;
+  /* border:  2px solid black; */
+}
+
+.nav-menu.active + .attandance_home_dashboard_outerlayer {
+  margin-left: 250px; /* Adjust this value according to your sidebar width */
+}
+
+.innerattandave_dashboard_student{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border : 2px solid red; */
+  width: 100%;
+  height: 100px;
+}
+
+.imagcontainer_attden{
+  width:  50px;
+  height: 50px;
+  margin-right: 10px;
+
+}
+.attandance_home_dashboard_inerlayer2{
+  display: flex;
+  width: 99.75%;
+  height: 50px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.text_h1_student_attendance_dashbord{
+   display: flex;
+   width: 50%;
+   height: 50px;
+   justify-content: center;
+   align-items: center;
+   border-right: 2px solid black;
+
+}
+.h1_h4_padding_i_given{
+  margin-right: 10px;
+}
+
+.box_attedance_section {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* Four columns */
+  grid-gap: 10px; /* Gap between grid items */
+  width: 100%; /* Ensure the container takes up the full width */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
+
+.attendance_box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  /* Ensure the box takes up the full width of its container */
+  width: calc(90% - 20px); /* Subtracting padding */
+  box-sizing: border-box;
+}
+
+.card_test_mark_get_12_attendance{
+  display: flex;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+.performace_text_xontainer_attandance{
+  width: 27%;
+    height: 196px;
+    border-right: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.chart_test_peformance_attdance{
+  width: 35%;
+  height: 196px;
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.result_analysis_work_here_attendance{
+  width: 38%;
+  height: 196px;
+
+}
+.pargarph_in_result_attandance{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.p_in_rane_us_attendance{
+  font-size: 20px;
+
+}
+

@@ -1,0 +1,80 @@
+.outerlayer_in_attendce{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+}
+
+.imagcontainer_attendance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+.imagcontainer_imge_attendance{
+    margin-right: 10px; 
+    height: 50px;
+    width: 50px;
+}
+.image_text_box_h1_sch_test_attendance{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 30px;
+   
+}
+.innerAttance1_from_detalis{
+    display: flex;
+    height: 240px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    margin-bottom: 10px;
+}
+.input_field_attadance_bar{
+    margin-top: 20px;
+    height: 90%;
+    width: 60%;
+    /* border: 2px solid yellow; */
+}
+.input_field_test_attdance{
+    display: block;
+    width: 50%;
+    padding: 10px 0;
+    margin-left: 150px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.basic_text_here_attendance{
+    height: 100%;
+    width: 38%;
+   border-left: 2px solid black;
+}
+.basic_text_here_attendance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table_in_test_score_weuse_attendance{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.save_btn_attandance{
+    background-color: #0B304D; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-bottom: 100px;
+    cursor: pointer;
+    border-radius: 8px;
+}
