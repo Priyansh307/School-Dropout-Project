@@ -389,6 +389,44 @@ router.get("/age-wise-student-counts", async (req, res) => {
   }
 });
 
+router.get("/caste-wise-dropout-counts", async (req, res) => {
+  try {
+    const token = req.cookies.token;
+    if (!token) {
+      return res.status(403).json({ status: false, message: "no token" });
+    }
+    const decoded = await jwt.verify(token, process.env.KEY);
+    const user = await School.findOne({ username: decoded.username });
+    const userDistrict = user.district;
+
+    const general = await Student.countDocuments({
+      city: { $regex: new RegExp(userDistrict, "i") },
+      caste: "open",
+      dropout: true
+    });
+    const st = await Student.countDocuments({
+      city: { $regex: new RegExp(userDistrict, "i") },
+      caste: "st",
+      dropout: true
+    });
+    const sc = await Student.countDocuments({
+      city: { $regex: new RegExp(userDistrict, "i") },
+      caste: "sc",
+      dropout: true
+    });
+    const obc = await Student.countDocuments({
+      city: { $regex: new RegExp(userDistrict, "i") },
+      caste: "obc",
+      dropout: true
+    });
+
+    return res.json({ status: true, general, st, sc, obc });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Error processing request" });
+  }
+});
+
 router.get("/dis-gender", async (req, res) => {
   try {
     const token = req.cookies.token;
@@ -483,6 +521,57 @@ router.get("/income-wise-student-counts", async (req, res) => {
 
 // Backend code
 // Backend code
+
+
+
+
+router.get("/city-wise-dropout-statistics", async (req, res) => {
+  try {
+    const token = req.cookies.token;
+    if (!token) {
+      return res.status(403).json({ status: false, message: "no token" });
+    }
+    const decoded = jwt.verify(token, process.env.KEY);
+    const user = await School.findOne({ username: decoded.username });
+    
+    // Retrieve all cities
+    const cities = await Student.distinct("city");
+    console.log(cities);
+
+    const cityStatistics = await Promise.all(
+      cities.map(async (city) => {
+        // Find students within the city
+        const students = await Student.find({ city: city });
+
+        // Calculate statistics for each city
+        const totalStudents = students.length;
+        console.log(students)
+        const totalMaleDropout = students.filter(student => student.gender === 'male').length;
+        const totalFemaleDropout = students.filter(student => student.gender === 'female').length;
+        const totalDropoutStudents = totalMaleDropout + totalFemaleDropout;
+        const dropoutRatio = (totalDropoutStudents / totalStudents) * 100;
+
+        return {
+          city: city,
+          totalStudents,
+          totalMaleDropout,
+          totalFemaleDropout,
+          totalDropoutStudents,
+          dropoutRatio: `${dropoutRatio.toFixed(2)}%`,
+        };
+      })
+    );
+
+    return res.json({ cityStatistics });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Error processing request" });
+  }
+});
+
+
+
+
 router.get("/school-wise-dropout-statistics", async (req, res) => {
   try {
     const token = req.cookies.token;
