@@ -561,23 +561,23 @@ router.get("/school-wise-dropout-statistics", async (req, res) => {
 
 router.get("/studentcard", verifyUser, async (req, res) => {
   try {
-    // const standard = req.params.standard;
-    // console.log('Received request for standard:');
     const user = req.user;
+    const standard = req.query.standard; // Retrieve the selected standard from the query parameters
+    // console.log(standard);
+    // Extract the numeric part from the standard string
+    const numericPart = parseInt(standard.replace('Standard ', ''));
 
-    // Query the database to fetch student data for the specified standard
-    const students = await Student.find({ studentstd: 12,user: user._id }); // Use 'standard' instead of 'studentstd'
-    // console.log("Fetched students:", students);
+    // Filter students based on the extracted numeric part
+    const students = await Student.find({ studentstd: numericPart, user: user._id });
 
-    // Return the student data as JSON response
     res.json({ success: true, students });
   } catch (err) {
     console.error(err);
-    res
-      .status(500)
-      .json({ success: false, message: "Error fetching student data" });
+    res.status(500).json({ success: false, message: "Error fetching student data" });
   }
 });
+
+
 
 
 
