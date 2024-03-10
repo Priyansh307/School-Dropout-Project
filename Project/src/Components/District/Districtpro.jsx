@@ -27,6 +27,7 @@ const Districtpro = () => {
                 <label htmlFor="year">Filter by Year:</label>
                 <input type="text" id="year" name="year"  placeholder="Enter year" />
                 <button type="submit">Filter</button>
+                {/* new  */}
             </form>
 </div>
   )
